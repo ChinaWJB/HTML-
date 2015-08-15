@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+	<meta charset="UTF-8" />
+	<head>
+		<title>test contenteditable</title>
+	</head>
+	
+	<script>
+		function ShowContent()
+		{
+			document.getElementById("info").innerHTML=document.getElementById("content").innerHTML;
+		}
+	</script>
+
+	<body style="background-image:url(picture1.jpg); background-repeat:no-repeat;">
+		<div id=div1>
+			<h3>您可以对以下内容进行更改</h3>
+			<div id=content contenteditable=true>
+				从明天起，做一个幸福的印，喂马，劈材，周游世界<br/>
+				从明天起，关心粮食和蔬菜<br/>
+			</div><br/>
+			<input type=button value=保存信息 onClick=ShowContent(); /><br/>
+			<div id=info></div>
+		</div>
+	</body>
+
+</html>

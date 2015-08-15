@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+	<meta charset=UTF-8>
+	<head>
+		<title>test input_search</title>
+	</head>
+	
+	<form id="form1">
+		<fieldset>
+			<legend>请输入搜索关键字：</legend>
+			<input type="search" id="searchtext"/>
+			<input type="submit" id="register" value="提交" onclick="return searchResult();"/>
+			
+			<p id="result"></p>
+				
+		</fieldset>
+	</form>
+	<script type="text/javascript" language="javascript">
+		function searchResult(){
+			document.getElementById("result").innerHTML="您输入的关键字是："+document.getElementById("searchtext").value;
+			return false;
+		}
+	</script>
+
+</html>

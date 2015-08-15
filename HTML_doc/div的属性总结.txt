@@ -1,0 +1,284 @@
+div属性 
+
+　　div属性
+
+　　color : #999999 文字颜色 
+
+　　font-family : 宋体 文字字型 
+
+　　font-size : 10pt 文字大小 
+
+　　font-style:itelic 文字斜体育
+
+　　font-variant:small-caps 小字体
+
+　　letter-spacing : 1pt 文字间距
+
+　　line-height : 200% 设定行高
+
+　　font-weight:bold 文字粗体
+
+　　vertical-align:sub 下标字
+
+　　vertical-align:super 上标字
+
+　　text-decoration:line-through 加?h除线
+
+　　text-decoration:overline 加顶线
+
+　　text-decoration:underline 加底线
+
+　　text-decoration:none ?h除连接底线
+
+　　text-transform : capitalize 首字大写
+
+　　text-transform : uppercase 英文大写
+
+　　text-transform : lowercase 英文写
+
+　　text-align:right 文字*右对齐
+
+　　text-align:left 文字*左对齐
+
+　　text-align:center 文字置中对齐 
+
+　　这些是一些简单的文字效果，可以应用到css的页面中。　
+
+　　背景
+
+　　background-color:black 背景颜色 
+
+　　background-image : url(image/bg.gif) 背景图片
+
+　　background-attachment : fixed 固定背景
+
+　　background-repeat : repeat 重复排列-网页预设
+
+　　background-repeat : no-repeat 不重复排列
+
+　　background-repeat : repeat-x 在x轴重复排列
+
+　　background-repeat : repeat-y 在y轴重复排列
+
+　　background-position : 90% 90% 背景图片x与y轴的位置 
+
+　　链接
+
+　　A 所有超连接
+
+　　A:link 超连接文字格式 
+
+　　A:visited 浏览过的连接文字格式 
+
+　　A:active 按下连接的格式 
+
+　　A:hover 鼠标移至连接
+
+　　边框
+
+　　border-top : 1px solid black 上框 
+
+　　border-bottom : 1px solid #6699cc 下框 
+
+　　border-left : 1px solid #6699cc 左框 
+
+　　border-right : 1px solid #6699cc 右框
+
+　　border: 1px solid #6699cc 四边框
+
+　　虚线
+
+　　<textarea style="border:1px dashed pink">
+
+　　实线
+
+　　<textarea style="border:1px solid pink">
+
+　　===========================================================================
+
+　　DIV 网页布局规范的对CSS的类及id命名
+
+　　Web开发者（也就是您）可以通过创建CSS类及id名称并使用这些名称来对div以及其他的页面元素、标签进行标识。对开发人员来说，在命名重新定义XHTML标记（tags）的CSS selectors时，必须保证其与预定义的标记准确匹配，但就类以及id选择器名称而言，则仁者见仁，智者见智。然而随心所欲的为这些类以及id命名则并不是个好的习惯。
+
+　　在阅读了由Andy Clarke（of Stuff and Nonsense and All That Malarkey）以及Eric Meyer所撰写的关于CSS类以及id命名规范的系列文章之后，我开始思考在自己的Web站点设计过程中对类以及ids的命名方式。
+
+　　直观命名
+
+　　当在设计Web页面以及需要对一个div进行标识的时候，最自然的想法就是使用可以描述元素所在页面位置的词汇来对其命名。这种方法使得类以及id的名称如下面所示：
+
+　　top-panel
+
+　　horizontal-nav
+
+　　left-side
+
+　　center-column
+
+　　right-col
+
+　　这些是CSS以及XHTML类和id的有效命名方式。这些词汇简单并且能够使人顾名思义，因此满足了标识页面元素以及相应的CSS样式的需要。
+
+　　但问题是这样的名称同页面内容的特定表达方式相关联。这些命名参考了某种特定页面布局中的页面元素位置，因此在这样的布局之外使用就会显得不合适甚至造成理解混乱。同时，这些命名没有涉及文档内容的结构。因此，下面给出了对CSS类以及ID命名更好的方法。
+
+　　结构化命名 
+
+　　结构化的标记意味着表达方式/位置信息同内容的完全分离——这其中包括出现在标记（markup）中的类和id名称。
+
+　　有标记的相关信息都是用来描述文档的结构而不是外观。这样的特点使得我们可以通过简单的改变CSS的方式来对不同外观格式下的内容（content）以及标记（markup）进行重用。当你理解这种方式时，很容易就可以发现采用页面位置来为类以及id命名的方式在处理如音频（audio）等外观格式上显得非常不合适。因此，应当根据在文档中的使用目的而非出现位置来对类以及id进行结构化命名。
+
+　　可以按照如下所示的结构化方式来对类以及id名称命名：
+
+　　branding
+
+　　main-nav
+
+　　subnav
+
+　　main-content
+
+　　sidebar
+
+　　这些名字同直观命名方式一样非常易懂，但他们描述了页面元素的作用而非位置。这使得代码更加符合使用纯粹的结构化标记（structural markup）的初衷，即开发人员可以在不改变标记的情况下对各种各样媒体下的显示格式进行处理。
+
+　　即使你不打算在其他的媒体上对Web页面进行格式修改，使用结构化命名方式还可以帮助你在日后的站点升级或重新设计中更为轻松。例如，结构化命名避免了当一个div同id right-column移动到页面左边后所带来的混乱。对div sidebar的采用这样的命名方式就显得更加适当，因为无论它出现在页面的哪一边，这个名字仍然对开发人员来说直观易懂。
+
+　　一些命名惯例
+
+　　Andy Clarke分析了40份由推崇标准化Web设计理念的开发人员所设计的Web站点的源代码。尽管类以及id名称很不统一，但是还是发现了一些频繁出现的常用名称。这里给出了最常用类/id名称的示例列表：
+
+　　header
+
+　　content
+
+　　nav
+
+　　sidebar
+
+　　footer
+
+　　这些常见的类以及id名称是否标志着一种标准的诞生或是普遍接受惯例的形成呢？尽管这是我所希望的，但我并不这么认为。我的确希望能够看见一整套对于我们每天都可以看到的常用页面元素的命名标准。同时，使用标准化的命名方式可以使得寻找页面元素以及对Web站点升级带来方便，尤其当需要在由不同开发人员在不同时间所开发站点中换来换去工作的时候。
+DIV属性position 决定 DIV tag 是如何放置的。“relative”意思是DIV的位置是相对于其他 tag 的，而“absolute”是说 DIV tag 的位置是相对于它所在的窗口。 
+
+left 相对于窗口左边的位置 
+
+top 相对于窗口上边的位置 
+
+width DIV tag 的宽度。所有在 DIV 里的文字或html都在里面。 
+
+height DIV tag 的高度。这个性质很少用除非你想 Clip 层次。
+ 
+color（字体颜色）：色彩代码；
+
+font-size（字体大小）：数值；
+
+line-height（行高）：数值；
+
+border（边框）：宽度、类型和颜色，类型主要支持以下几种：none,dotted,dashed,solid,double,groove,ridge,inset,window-inset,outset；
+
+font-weight（字体粗细）：normal、bold、bolder、lighter；
+
+font-family（字体类型）：Arial、Tahoma、Verdana、仿宋_GB2312、黑体、楷体_GB2312、隶书、宋体、幼圆
+
+clip 给出 layer 的 clipping（可看的见的）部分。Clip 可使得 DIV 显示为一个可以定义的很准确的方块。你可以用以下的四个值来给出这个方块的在 DIV 位置和大小。
+
+clip:rect(top,right,bottom,left); 
+
+visibility 隐蔽或展现DIV 根据它的值“visible”，“hidden”，“inherit”。 
+
+z-index DIV tag 的立体位置。值越大 DIV 的位置越高。 
+
+background-color DIV 背景的颜色。 
+
+layer-background-color Netscape 的 DIV 背景颜色。 
+
+background-image DIV 的背景图象。 
+
+layer-background-image Netscape 的 DIV 的背景图象
+
+filter:chroma(COLOR=转换成透明的颜色)（chroma过滤器）：色彩代码，该颜色将转换成透明效果；
+
+word-break（断字）：normal（默认，正常断字）、keep-all（严格不断字）、break-all（严格断字）；
+
+direction（文字方向）：ltr（默认，从左向右）、rtl（从右向左）;
+
+padding-left：层中的内容距离层左边框的距离；padding-right：层中的内容距离层左边框的距离；padding-top：层中的内容距离层顶部边框的距离；padding-bottom：层中的内容距离层底部边框的距离。
+
+绝对定位和相对定位 （position）
+
+绝对定位：
+
+定位属性将是网虫们打开幸福之门的钥匙：
+
+H4 { position: absolute; left: 100px; top: 43px }
+
+这项CSS规则让浏览器将<H4>的起始位置精确地定在距离浏览器左边100象素，距离其顶部43象素的位置。注意这里唯一设置了的是左边和顶部，也就说，文字将从左到右，从上到下载入浏览窗口。
+
+左边和顶部属性很直观，左边（left）设定要素距浏览器窗口左边的距离，顶部（top）设定距离浏览器窗口顶部的距离。设定这些距离时，你可以使用所学过的各种度单位或比例值。使用比例值时，比例值的是相对于母体要素的尺寸。
+
+你可以定位什么呢？任何东西！段落、单词、GIF和JPEG图象、QUICKTIME电影等等。
+
+相对定位：
+
+绝对定位使你能精确地定位要素在页面的独立位置，而不考虑页面其它要素的定位设置。相对定位指你所定位的要素的位置相对于在文件中所分配的位置。例：
+
+I { position: relative; left: 40px; top: 10px }
+
+相对定位的关键在于定位了的要素的位置是相对于它通常应在的位置进行定位。相对定位单元出现在普通的静态定位单元的行间，定位时没有把自己和静态定位单元完全分开。如果你停止使用相对定位，则文字的显示位置将恢复正常。使用相对定位时要小心，否则容易将页面弄得非常乱。
+
+除了相对定位和绝对定位，你还可以使用static（静止）参数值。Static 是 position 特性的缺省值。它的使用方法同普通HTML中的定位方法，不能附加特殊的定位设置。也就是说，除了边距特性，或通过使用 float 特性来浮动单元可影响单元的定位外，其它均不可以。
+
+定位单元的控制 （width、height、visiblility）
+
+除了控制定位单元的左上角位置，你还可以控制单元的宽度和高度，及单元在页面的可视性。
+
+宽度：定位了的要素在页面上显示时仍然会从左到右一直显示。利用宽度属性就可以设定字符向右流动的限制，即设定要素的宽度。
+
+DIV { position: absolute; left: 200px; top: 40px; width: 150px }
+
+浏览器接到这项规则时，它将文字按照规则规定的效果显示，还将段落的最大水平尺寸限制在150象素。
+
+宽度属性只适用于绝对定位的要素。你可以使用我们学过的任何一种长度单位，或使用比例值设定宽度，比例值指相对于母体要素的比例。IE 4中，这项属性还可用于图象。你可以通过宽度设置人为地拉宽或压缩图象。
+
+高度：理论上讲，高度应该和宽度的设置类似，只不过是在垂直方向上：
+
+DIV { position: absolute; left: 200px; top: 40px; height: 150px }
+
+这里我用了“理论上讲”，因为有些浏览器不支持高度属性。
+
+可视性：利用CSS，你可以隐藏要素，使其在页面上看不见。这条属性对于定位了的和未定位的要素都适用。
+
+H4 { visibility: hidden }
+
+选项： 
+
+visible 使要素可以被看见 
+
+hidden 使要素被隐藏 
+
+inherit 指它将继承母体要素的可视性设置。 
+
+值 inherit 为缺省值。这使单元继承父单元的可见性。所以，如果某一段是隐藏的，则它包含的任何行间单元也都被隐藏。这一继承性可被明确指定的可见性取代。例如，段内的 EM 单元被指定为可见，这时如果该段被隐藏，则段内的所有其它内容都将消失，而唯有 EM 单元中的文本是可见的。
+
+当一个要素被隐藏后，它仍然要占据浏览器窗口中的原有空间。所以，如果你将文字包围在一幅被隐藏的图象周围，那么，其显示效果将是文字包围着一块空白区域。此新闻
+
+这条属性在编写语言和使用动态HTML时很有用，比如你可以使某段落或图象只在鼠标滑过时才显示。
+
+单元层次 （z-index）
+
+特性 z-index 用于堆叠屏幕上的单元。缺省情况下，单元堆叠的顺序为它们出现在HTML标记的顺序——也就是说，后出现单元堆叠在早出现单元的上面。Z-index 特性实际上定义同属（sibling）单元的堆叠顺序以及单元相对父单元的堆叠。按照规范草案，具有正 z-index 值的单元群都堆叠在父单元之上，它们自己的堆叠顺序则按其取值的大小来决定（值大的单元在上层）。同样，具有负 z-index 值的单元群都堆叠在父单元之下，它们自己的堆叠顺序也按取值的大小来定（值大的单元在上层，例如值为 -1 的单元在值为 -2 的单元的上面）。
+
+该参数值使用纯整数。z-index用于绝对定位或相对定位了的要素。你也可以给图象设定z-index。（对于Communicator，最好将 <IMG>标签包在<SPAN>或 <DIV>标签内，然后将z-index应用到<SPAN>或 <DIV>。）
+
+剪辑绝对定位单元 （clip）
+
+绝对定位单元可以被剪辑——也即剪辑显示给用户的区域，只显示单元的一部分而把其余部分作透明处理。对于传统的基于文本和图像的网络页面，这并不是一个很有用的特征。但若要求多媒体页面，这是很有用的。如 Netscape Communivator 4 和 Internet Explorer 4 都支持多媒体页面，它们通过文档的脚本接口动态地调整单元周围的剪辑区，从而实线文本“划入”和图像渐显等显示特征。
+
+在CSS中，剪辑通过 clip 特性来控制，这一特性只能用于绝对定位单元，其缺省值为 auto，按单元的外边缘来剪辑单元（实际上等于没有剪辑）。另外，可通过如下表达式设置剪辑框：
+
+clip : rect(top,right.bottom,left) ;
+
+其中 top、right、bottom 和 left 分别是矩形剪辑框的上边、右边、下边和左边相对于被剪辑单元左上角的位置。Top、right、bottom 和 left 的值可以为任意绝对或相对长度值（但不能为百分比值），或者是关键字 auto。取值为 auto 意味着剪辑区域的各边放好以后，被剪辑单元中的任何内容都不会超出这个区域。
+
+控制单元溢出 （overflow）
+
+固定绝对或相对定位单元的 width 和 height，很可能会因为指定的区域不能满足单元实际内容的需要，而造成单元内容溢出。这时可使用 overflow 来指定浏览器如何处理溢出：值 none（缺省值）允许浏览器显示溢出的内容，因此单元可溢出指定的区域。而值 clip 要求浏览器在单元底部和右边剪辑单元内容，这样，超出指定区域的单元内容将不显示。值 scroll 也同样要求浏览器在单元底部和右边剪辑单元内容（同 clip），不过，浏览器应该（如果可能的话）为单元提供滚动条以使用户能通过滚动来浏览被剪辑的内容。

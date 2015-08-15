@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+	<meta charset=UTF-8>
+	<head>
+		<title>test input_url</title>
+	</head>
+	
+	<form action="./register.php" method="post" id="form">
+		<input type=hidden name=referer value="./index.html"/>
+		<div class="content">
+			<p>
+				<label for="email">用户名:</label>
+				<input type="text" name=username id=usrname ></label>
+				<span id="checkusername">&nbsp;</span>
+			</p>
+			<p>
+				<label for="email">博客地址:</label>
+				<input type="url" id=url /> </label>
+				<span id="checkemail">&nbsp;</span>
+			</p>
+			<input type="hidden" name="registersubmit" value="true">
+			<input type="submit" name="mysubmit" value="" class="tj" />
+		</div>
+	</form>
+
+</html>
+
+

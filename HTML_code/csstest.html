@@ -1,0 +1,57 @@
+<!doctype html>
+<!--HTML 标签对大小写不敏感：<P> 等同于 <p>。许多网站都使用大写的 HTML 标签。
+W3School 使用的是小写标签，因为万维网联盟（W3C）在 HTML 4 中推荐使用小写，而在未来 (X)HTML 版本中强制使用小写。-->
+<html>
+
+<head>
+	<title>css练习</title>
+	<style type="text/css"><!--style 规定元素的行内样式-->
+		
+		#p1{color:red;font-size:30px}<!--70px像素控制文字大小-->
+		#p2{font-weight:bolder}
+		#p3{font-size:30px}
+		.p4{font-family:楷体}
+	</style>
+</head>
+
+<body  bgcolor="red" <!--background="http://pic7.nipic.com/20100605/1866517_112039572651_2.jpg"-->><!--bgcolor改变背景颜色,background改变背景图案-->
+	<h1 align="center">css的演示文档</h1><!--align 标题位置（居中）也可以用来设置图片在文字中的位置middle,botton,top-->
+	<hr /><!--使用水平线 (<hr> 标签) 来分隔文章中的小节是一个办法（但并不是唯一的办法）。-->
+	<p id="p1">Look!Styles an colors</p><!--id 是为了找见对应的段落而用的-->
+	<hr />
+	<p id="p2">This text is in Verdana and red</p>
+	<hr />
+	<p id="p3">This text is in Times and blue</p>
+	<p class="p4">此文本为楷体</p>
+	<br>fjefjefjekfjkejfkef<br>fefewfnewfjhefnjef<br>jfifkdjhvidfd<br><!--<br>换行 -->
+	<br /><!--<br /> 元素是一个空的 HTML 元素。由于关闭标签没有任何意义，因此它没有结束标签
+			在 XHTML、XML 以及未来的 HTML 版本中，不允许使用没有结束标签（闭合标签）的 HTML 元素。
+			即使 <br> 在所有浏览器中的显示都没有问题，使用 <br /> 也是更长远的保障-->
+	dijhvudhvxuvnducjxnj<br><br>
+	<img src="我就是我.JPG" alt="我就是我" />
+	
+	<br><br>
+	<p>图像 <img border=8 src="http://pic4.nipic.com/20091125/1866517_185151009695_2.jpg" align="top" alt="kobe" width="100" height="100"> 在文本中</p>
+	<p>图像 <img border=2 src ="http://pic4.nipic.com/20091125/1866517_185151009695_2.jpg" align="botton" alt="kobe" width="100" height="100"> 在文本中</p>
+	
+	<p>
+	您也可以使用图像来作链接：
+	<a href="http://image.baidu.com/i?tn=baiduimage&ps=1&ct=201326592&lm=-1&cl=2&nc=1&word=%E7%A7%91%E6%AF%94&ie=utf-8">
+	<img border="8" src="http://pic5.nipic.com/20100226/3279936_091345006264_2.jpg"  alt="kobe2" /><!--<img> 标签的 border=0,1,2,3,4,5 属性规定图像周围的边框的宽度，就是说可以增加或去掉图像的边框。-->
+	</a><br />此图片链接后还在本窗口打开网页，不会新建窗口
+	
+	</p>
+	HTML 链接 - target 属性：<br />
+	<a href="http://www.w3school.com.cn/" target="_blank">Visit W3School!</a>
+	<p>如果把链接的 target 属性设置为 "_blank"，该链接会在新窗口中打开。</p>
+	
+	<p><a href="#C4">查看 Chapter 4。</a>当使用命名锚（named anchors）时，我们可以创建直接跳至该命名锚（比如页面中某个小节）的链接，
+										这样使用者就无需不停地滚动页面来寻找他们需要的信息了</p>
+	<h2>Chapter 1</h2>
+	<p>This chapter explains ba bla bla</p>
+	<h2><a name="C4">Chapter 4</a></h2>
+	<p>This chapter explains ba bla bla</p>
+
+</body>
+
+</html>

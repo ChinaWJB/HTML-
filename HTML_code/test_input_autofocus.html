@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+	<meta charset=UTF-8>
+	<head>
+		<title>test input autofocus</title>
+	</head>
+
+	<form action="./register.php" method=post id=form>
+		<input type=hidden name=referer value="./index.html"/>
+		<div class=content>
+			<p>
+				<label for=email>用户姓名：</label>
+				<input type=text name=username id=username autofocus=true>
+				</label>
+				<span id=checkusername>&nbsp;</span>
+			</p>
+	
+			<p>
+				<label for=email>登录密码：</label>
+				<input type=text name=password id=password autocomplete=off>
+				</label>
+				<span id=checkpassword>&nbsp;</span>
+			</p>
+			<p>
+				<label for=email>年&nbsp;&nbsp;龄：</label>
+				<input type=text name=age id=age>
+				</label>
+				<span id=cheage>&nbsp;</span>
+			</p>
+				<p>
+				<label for=email>固定电话：</label>
+				<input type=telephone name=telephone pattern="^\d{3}-\d{8}|\d{4}-\d{7}$">
+				</label>
+				<span id=checkemail>&nbsp;</span>
+			</p>
+			<p>
+				<input type=hidden name=registersubmit value=true>
+				<input type=submit name=mysubmit value="注册" class=tj>
+			</p>
+	</form>
+	
+	
+</html>

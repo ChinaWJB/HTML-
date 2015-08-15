@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+	<meta charset="UTF-8" />
+	<head>
+		<title> test hidden</title>
+
+	</head>
+	
+	<script>
+		function Show(id)
+		{
+			for(var i=1;i<=4;i++){
+				if(id==i)
+					document.getElementById("div"+id).style.display="block";
+				else
+					document.getElementById("div"+i).style.display="none";
+			}
+		}
+	</script>
+	
+	<body style="background-image:url(picture1.jpg); background-repeat:no-repeat;">
+		<nav>
+			<a href="javascript:Show(1)">三国演义</a>
+			<a href="javascript:Show(2)">水浒传</a>
+			<a href="javascript:Show(3)">西游记</a>
+		</nav>
+		<br/>
+		<span id=div1>&nbsp;&nbsp;&nbsp;三国演义简介。。。。。</span>
+		<span id=div2 style=display:none;>水浒传简介。。。。。/*省略。。*/</span>
+		<span id=div3 style=display:none;>西游记简介。。。。。/*省略。。*/</span>
+	</body>
+
+</html>

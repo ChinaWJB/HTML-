@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+	<meta charset=UTF-8>
+
+	<script type="text/javascript">
+		var intValue=0;
+		var intTimer;
+		var objPro=document.getElementById("objprogress");//获取进度条
+		var objTip=document.gerElementById("pTip");		  //获取span元素
+		function Interval_handler(){	
+				 
+			intValue++;
+			
+			objPro.value=intValue;						  //累计添加进度条的值
+			 document.getElementById("info").innerHTML=objPro.value;
+			if(intValue>=objPro.max){					  //判断值的大小
+				clearInterval(intTimer);
+				objTip.innerHTML="统计完成: ";
+				objPro.value=8;		
+			
+			}else{
+			
+				objTip.innerHTML="正在统计"+intValue+"%";
+					
+			}
+			
+		}
+		
+		//下载按钮单击事件
+		function Btn_Click(){
+			intTimer=setInterval(Interval_handler,1000);
+		}
+	</script>
+	
+	<style>
+		details{
+			 margin:50;
+			 padding:100;
+			 color:red;
+		}
+	</style>
+	
+	<body>
+		<div>
+			<header>隐形的翅膀</header>
+			<p>每一次都在徘徊孤单中坚强&nbsp;&nbsp;&nbsp;每一次就算很受伤也不闪泪光</p>
+			<p>我知道     我一直有双隐形的翅膀&nbsp;&nbsp;&nbsp;带我飞 飞过绝望</p>
+
+			单击统计网友的喜欢度：<input type="button" value="统计" onClick="Btn_Click();"/><br/><br/>
+			<span id="pTip">统计进度(喜欢度)：</span>
+			<progress id="objprogress" min="0" max="10" value="6">正在统计。。
+			</progress>
+		</div>
+		
+		<div id=div1>
+			<h3>您可以对以下内容进行更改</h3>
+			<div id=content contenteditable=true>
+				从明天起，做一个幸福的印，喂马，劈材，周游世界<br/>
+				从明天起，关心粮食和蔬菜<br/>
+			</div><br/>
+		
+			<div id=info></div>
+		</div>
+		
+		
+		<details open=true>
+			<summary>日记分类</summary>
+			<ul>
+				<li><a href="#">好贴分享</a></li>
+			</ul>
+		</details>
+		
+		<section contenteditable="true" cite="http://www.baidu.com">
+			<h4>王萌</h4><p>&nbsp;&nbsp;&nbsp;女，汉族，22岁，喜欢唱歌跳舞</p>
+		</section>
+		
+	</body>
+
+</html>

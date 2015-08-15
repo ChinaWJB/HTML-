@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+	<meta charset=UTF-8>
+	<head>
+		<title>test inputtype color and range</title>
+	</head>
+	<form id="form1">
+		选择颜色：
+		<input type=color id=changecolor value=#00a2e8 width=300/>
+		<input type=button id=button onclick=change() value=更换背景颜色 />
+	</form>
+	
+	<form id=form2>
+		<legend>请选择颜色值：</legend>
+			<input id=textRed type=range min=0 max=255 step=1 value=100 onchange=changeCol() />
+			<input id=textGreen type=range min=0 max=255 step=10 value=100 onchange=changeCol() />
+			<input id=textBlue type=range min=0 max=255 step=5 value=100 onchange=changeCol() />
+			
+			<span id=spancolor>拖动滑动条时可改变该区域的背景颜色</span>
+	</form>
+	
+	<script type=text/javascript language=javascript>
+		function change(){
+		
+			var i=document.getElementById("changecolor").value;
+			document.body.style.backgroundColor=i;
+			
+		}
+		
+		function changeCol(){
+		
+			var textr=document.getElementById("textRed").value;
+			var textg=document.getElementById("textGreen").value;
+			var textb=document.getElementById("textBlue").value;
+
+			var colors="rgb("+textr+","+textg+","+textb+")";
+
+			document.getElementById("spancolor").style.backgroundColor=colors;
+			
+			
+		}
+	</script>
+	
+
+</html>
